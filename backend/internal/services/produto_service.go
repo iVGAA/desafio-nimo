@@ -30,7 +30,6 @@ func (service *ProdutoService) Create(ctx context.Context, nome, unidade string)
 	if nome == "" {
 		return nil, fmt.Errorf("nome é obrigatório")
 	}
-	nome = strings.ToLower(nome)
 	
 	unidade = strings.TrimSpace(unidade)
 	if unidade == "" {

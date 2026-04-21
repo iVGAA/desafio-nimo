@@ -30,7 +30,6 @@ func (service *FornecedorService) Create(ctx context.Context, nome, cnpj string)
 	if nome == "" {
 		return nil, fmt.Errorf("nome é obrigatório")
 	}
-	nome = strings.ToLower(nome)
 	cnpj = strings.TrimSpace(cnpj)
 	if cnpj == "" {
 		return nil, fmt.Errorf("cnpj é obrigatório")
